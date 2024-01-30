@@ -107,15 +107,7 @@ Widget buildDescriptionTabContent() {
                           ),
                         ),
                       ),
-                      DataCell(
-                        Text(
-                          'B   I   U   &   "  A',
-                          style: TextStyle(
-                            fontSize: 14.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
+                      DataCell(Text('')),
                       DataCell(
                         Row(
                           children: [

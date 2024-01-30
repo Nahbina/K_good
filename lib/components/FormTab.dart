@@ -6,7 +6,7 @@ class FormTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 5,
       child: Scaffold(
         backgroundColor: Color.fromRGBO(244, 244, 244, 1),
         body: Column(
@@ -25,18 +25,10 @@ class FormTab extends StatelessWidget {
             Expanded(
               child: TabBarView(
                 children: [
-                  // Your Tab 1 content
                   buildPlansTabContent(),
-
-                  // Your Tab 2 content
                   Center(child: Text('My Account')),
-
-                  // Your Tab 3 content
                   Center(child: Text('Shipping')),
-
-                  // Your Tab 4 content
                   Center(child: Text('My Store')),
-                  // Your Tab 5 content
                   Center(child: Text('Pricing Rules')),
                 ],
               ),
