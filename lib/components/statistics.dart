@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 
-class Statics extends StatelessWidget {
+class Statics extends StatefulWidget {
+  @override
+  State<Statics> createState() => _StaticsState();
+}
+
+class _StaticsState extends State<Statics> {
   @override
   Widget build(BuildContext context) {
     List<Widget> rowTitles = [
-      Row(
+      const Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
@@ -33,7 +38,7 @@ class Statics extends StatelessWidget {
           flex: 3,
           child: Container(
             height: 400,
-            color: Color.fromRGBO(233, 233, 233, 1.0),
+            color: const Color.fromRGBO(233, 233, 233, 1.0),
             padding: const EdgeInsets.all(10),
             child: LineChart(
               LineChartData(
@@ -55,32 +60,30 @@ class Statics extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(width: 10), // Add padding between LineChart and Table
+        const SizedBox(width: 10),
         Expanded(
           flex: 1,
-          child: Container(
-            child: Center(
-              child: Table(
-                border: TableBorder.all(
-                  color: Color.fromRGBO(238, 222, 222, 1),
-                ),
-                defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-                children: List.generate(rowTitles.length, (index) {
-                  return TableRow(
-                    children: [
-                      TableCell(
-                        child: Container(
-                          height: 50,
-                          color: Color.fromRGBO(233, 233, 233, 1.0),
-                          child: Center(
-                            child: rowTitles[index],
-                          ),
+          child: Center(
+            child: Table(
+              border: TableBorder.all(
+                color: const Color.fromRGBO(238, 222, 222, 1),
+              ),
+              defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+              children: List.generate(rowTitles.length, (index) {
+                return TableRow(
+                  children: [
+                    TableCell(
+                      child: Container(
+                        height: 50,
+                        color: const Color.fromRGBO(233, 233, 233, 1.0),
+                        child: Center(
+                          child: rowTitles[index],
                         ),
                       ),
-                    ],
-                  );
-                }),
-              ),
+                    ),
+                  ],
+                );
+              }),
             ),
           ),
         ),
@@ -94,12 +97,12 @@ class Statics extends StatelessWidget {
       children: [
         Text(
           '  $number.',
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.bold),
         ),
-        Icon(Icons.map),
-        Text('CountryName'),
+        const Icon(Icons.map),
+        const Text('CountryName'),
         Text('$value'),
-        Icon(Icons.arrow_upward_sharp),
+        const Icon(Icons.arrow_upward_sharp),
       ],
     );
   }

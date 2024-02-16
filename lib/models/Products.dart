@@ -8,7 +8,7 @@ class Products extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -18,9 +18,6 @@ class Products extends StatelessWidget {
               child: Header(),
             ),
             SizedBox(height: 20.0),
-            SizedBox(
-              height: 20,
-            ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 12),
               child: MyProduct(),

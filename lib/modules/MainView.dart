@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:k_good/models/Imports.dart';
-import 'package:k_good/models/Language.dart';
-import 'package:k_good/models/Orders.dart';
-import 'package:k_good/models/Products.dart';
-import 'package:k_good/models/SearchProduct.dart';
-import 'package:k_good/models/Settings.dart';
-import 'package:k_good/models/Support.dart';
 import 'package:side_navigation/side_navigation.dart';
 
 import '../models/Dashboard.dart';
+import '../models/Imports.dart';
+import '../models/Language.dart';
+import '../models/Orders.dart';
+import '../models/Products.dart';
+import '../models/SearchProduct.dart';
+import '../models/Settings.dart';
+import '../models/Support.dart';
 
 class MainView extends StatefulWidget {
   const MainView({Key? key}) : super(key: key);
@@ -18,7 +18,9 @@ class MainView extends StatefulWidget {
 }
 
 class _MainViewState extends State<MainView> {
-  List<Widget> views = [
+  int selectedIndex = 0;
+
+  final List<Widget> views = const [
     AdminHome(),
     SearchProduct(),
     Imports(),
@@ -27,31 +29,7 @@ class _MainViewState extends State<MainView> {
     Settings(),
     Language(),
     Support(),
-
-    // Center(
-    //   child: Text('Search Product'),
-    // ),
-    // Center(
-    //   child: Text('Imports'),
-    // ),
-    // Center(
-    //   child: Text('Orders'),
-    // ),
-    // Center(
-    //   child: Text('Products'),
-    // ),
-    // Center(
-    //   child: Text('Settings'),
-    // ),
-    // Center(
-    //   child: Text('Language'),
-    // ),
-    // Center(
-    //   child: Text('Support'),
-    // ),
   ];
-
-  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -59,11 +37,11 @@ class _MainViewState extends State<MainView> {
       body: Row(
         children: [
           Container(
-            color: Color.fromRGBO(238, 222, 222, 1),
+            color: const Color.fromRGBO(238, 222, 222, 1),
             child: SideNavigationBar(
               header: SideNavigationBarHeader(
-                image: SizedBox.shrink(),
-                subtitle: Text(''),
+                image: const SizedBox.shrink(),
+                subtitle: const Text(''),
                 title: LayoutBuilder(
                   builder: (context, constraints) {
                     final isCollapsed = constraints.maxWidth <

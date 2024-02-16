@@ -1,46 +1,51 @@
 import 'package:flutter/material.dart';
 
-class Order1 extends StatelessWidget {
+class Order1 extends StatefulWidget {
+  const Order1({Key? key}) : super(key: key);
+
+  @override
+  State<Order1> createState() => _Order1State();
+}
+
+class _Order1State extends State<Order1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          child: PaginatedDataTable(
-            header: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Recent Orders',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
+        child: PaginatedDataTable(
+          header: const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Recent Orders',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
                 ),
-                Text(
-                  'View Details',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
+              ),
+              Text(
+                'View Details',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
                 ),
-              ],
-            ),
-            columns: const [
-              DataColumn(label: Text('Image')),
-              DataColumn(label: Text('Product')),
-              DataColumn(label: Text('Quantity')),
-              DataColumn(label: Text('OrderDate')),
-              DataColumn(label: Text('Price')),
-              DataColumn(label: Text('Profit')),
-              DataColumn(label: Text('Customer')),
-              DataColumn(label: Text('Country')),
-              DataColumn(label: Text('Status')),
+              ),
             ],
-            source: MyDataTableSource(),
-            rowsPerPage: 5, // Set the number of rows per page
-            horizontalMargin: 0.0, // Set horizontal margin to 0
           ),
+          columns: const [
+            DataColumn(label: Text('Image')),
+            DataColumn(label: Text('Product')),
+            DataColumn(label: Text('Quantity')),
+            DataColumn(label: Text('OrderDate')),
+            DataColumn(label: Text('Price')),
+            DataColumn(label: Text('Profit')),
+            DataColumn(label: Text('Customer')),
+            DataColumn(label: Text('Country')),
+            DataColumn(label: Text('Status')),
+          ],
+          source: MyDataTableSource(),
+          rowsPerPage: 5,
+          horizontalMargin: 0.0,
         ),
       ),
     );
@@ -50,25 +55,24 @@ class Order1 extends StatelessWidget {
 class MyDataTableSource extends DataTableSource {
   @override
   DataRow getRow(int index) {
-    // Implement your data retrieval logic here
     return DataRow(cells: [
-      DataCell(Text('1')),
+      const DataCell(Text('1')),
       DataCell(Container(
         width: double.infinity,
-        child: Text('Led Strip Lights\nGovee -378695'),
+        child: const Text('Led Strip Lights\nGovee -378695'),
       )),
-      DataCell(Text('3')),
-      DataCell(Text('05.11.21')),
-      DataCell(Text('85\$')),
-      DataCell(Text('30\$')),
-      DataCell(Text('John Marks')),
-      DataCell(Text('United States')),
-      DataCell(Text('In Transit')),
+      const DataCell(Text('3')),
+      const DataCell(Text('05.11.21')),
+      const DataCell(Text('85\$')),
+      const DataCell(Text('30\$')),
+      const DataCell(Text('John Marks')),
+      const DataCell(Text('United States')),
+      const DataCell(Text('In Transit')),
     ]);
   }
 
   @override
-  int get rowCount => 5; // Replace with the total number of rows
+  int get rowCount => 5;
 
   @override
   bool get isRowCountApproximate => false;

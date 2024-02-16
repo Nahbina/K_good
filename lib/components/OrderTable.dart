@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class OrderTable extends StatelessWidget {
+  const OrderTable({super.key});
+
   @override
   Widget build(BuildContext context) {
     return PaginatedDataTable(
@@ -16,8 +18,8 @@ class OrderTable extends StatelessWidget {
         DataColumn(label: Text('More')),
       ],
       source: MyDataTableSource(),
-      rowsPerPage: 5, // Set the number of rows per page
-      horizontalMargin: 0.0, // Set horizontal margin to 0
+      rowsPerPage: 5,
+      horizontalMargin: 0.0,
     );
   }
 }
@@ -25,10 +27,9 @@ class OrderTable extends StatelessWidget {
 class MyDataTableSource extends DataTableSource {
   @override
   DataRow getRow(int index) {
-    // Implement your data retrieval logic here
-    return DataRow(cells: [
+    return const DataRow(cells: [
       DataCell(Text('1')),
-      DataCell(Container(
+      DataCell(SizedBox(
         width: double.infinity,
         child: Text('Led Strip Lights\nGovee -378695'),
       )),
@@ -43,7 +44,7 @@ class MyDataTableSource extends DataTableSource {
   }
 
   @override
-  int get rowCount => 5; // Replace with the total number of rows
+  int get rowCount => 5;
 
   @override
   bool get isRowCountApproximate => false;

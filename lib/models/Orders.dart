@@ -12,16 +12,16 @@ class Orders extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Header(),
-              SizedBox(height: 20.0),
+              const Header(),
+              const SizedBox(height: 20.0),
               Container(
-                padding: EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.only(top: 20),
                 height: 190,
-                color: Color.fromRGBO(196, 196, 196, 1),
+                color: const Color.fromRGBO(196, 196, 196, 1),
                 child: Column(
                   children: [
                     Row(
@@ -29,18 +29,18 @@ class Orders extends StatelessWidget {
                         Container(
                           height: 50,
                           width: 500,
-                          color: Color.fromRGBO(159, 157, 157, 1),
-                          margin: EdgeInsets.all(8.0),
-                          child: Center(
+                          color: const Color.fromRGBO(159, 157, 157, 1),
+                          margin: const EdgeInsets.all(8.0),
+                          child: const Center(
                             child: Text('Enter Keyword'),
                           ),
                         ),
                         Expanded(
                           child: Container(
                             height: 50,
-                            color: Color.fromRGBO(62, 67, 71, 1),
-                            margin: EdgeInsets.all(8.0),
-                            child: Center(
+                            color: const Color.fromRGBO(62, 67, 71, 1),
+                            margin: const EdgeInsets.all(8.0),
+                            child: const Center(
                               child: Text(
                                 'Search',
                                 style: TextStyle(
@@ -53,8 +53,8 @@ class Orders extends StatelessWidget {
                         Expanded(
                           child: Container(
                             height: 50,
-                            margin: EdgeInsets.all(8.0),
-                            child: Center(
+                            margin: const EdgeInsets.all(8.0),
+                            child: const Center(
                               child: Text(
                                 'Upload Date',
                                 style: TextStyle(
@@ -68,8 +68,8 @@ class Orders extends StatelessWidget {
                           child: Container(
                             height: 50,
                             color: Colors.white,
-                            margin: EdgeInsets.all(8.0),
-                            child: Center(
+                            margin: const EdgeInsets.all(8.0),
+                            child: const Center(
                               child: Text(
                                 '01.05.21',
                                 style: TextStyle(
@@ -83,8 +83,8 @@ class Orders extends StatelessWidget {
                           child: Container(
                             height: 50,
                             color: Colors.white,
-                            margin: EdgeInsets.all(8.0),
-                            child: Center(
+                            margin: const EdgeInsets.all(8.0),
+                            child: const Center(
                               child: Text('01.06.21'),
                             ),
                           ),
@@ -97,8 +97,8 @@ class Orders extends StatelessWidget {
                           child: Container(
                             height: 50,
                             color: Colors.white,
-                            margin: EdgeInsets.all(8.0),
-                            child: Center(
+                            margin: const EdgeInsets.all(8.0),
+                            child: const Center(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -115,8 +115,8 @@ class Orders extends StatelessWidget {
                           child: Container(
                             height: 50,
                             color: Colors.white,
-                            margin: EdgeInsets.all(8.0),
-                            child: Center(
+                            margin: const EdgeInsets.all(8.0),
+                            child: const Center(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -133,8 +133,8 @@ class Orders extends StatelessWidget {
                           child: Container(
                             height: 50,
                             color: Colors.white,
-                            margin: EdgeInsets.all(8.0),
-                            child: Center(
+                            margin: const EdgeInsets.all(8.0),
+                            child: const Center(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -151,8 +151,8 @@ class Orders extends StatelessWidget {
                           child: Container(
                             height: 50,
                             color: Colors.white,
-                            margin: EdgeInsets.all(8.0),
-                            child: Center(
+                            margin: const EdgeInsets.all(8.0),
+                            child: const Center(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -169,8 +169,8 @@ class Orders extends StatelessWidget {
                           child: Container(
                             height: 50,
                             color: Colors.white,
-                            margin: EdgeInsets.all(8.0),
-                            child: Center(
+                            margin: const EdgeInsets.all(8.0),
+                            child: const Center(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -187,8 +187,8 @@ class Orders extends StatelessWidget {
                           child: Container(
                             height: 50,
                             color: Colors.white,
-                            margin: EdgeInsets.all(8.0),
-                            child: Center(
+                            margin: const EdgeInsets.all(8.0),
+                            child: const Center(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -205,8 +205,8 @@ class Orders extends StatelessWidget {
                           child: Container(
                             height: 50,
                             color: Colors.white,
-                            margin: EdgeInsets.all(8.0),
-                            child: Center(
+                            margin: const EdgeInsets.all(8.0),
+                            child: const Center(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -223,8 +223,8 @@ class Orders extends StatelessWidget {
                           child: Container(
                             height: 50,
                             color: Colors.white,
-                            margin: EdgeInsets.all(8.0),
-                            child: Center(
+                            margin: const EdgeInsets.all(8.0),
+                            child: const Center(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -242,7 +242,7 @@ class Orders extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Container(
                 height: 50,
                 child: Row(
@@ -253,7 +253,7 @@ class Orders extends StatelessWidget {
                           text: TextSpan(
                             style: DefaultTextStyle.of(context).style,
                             children: [
-                              TextSpan(
+                              const TextSpan(
                                 text: ' 15 Orders Found',
                                 style: TextStyle(
                                   fontSize: 20,
@@ -268,8 +268,8 @@ class Orders extends StatelessWidget {
                     Container(
                       width: 100,
                       height: 50,
-                      color: Color.fromRGBO(241, 230, 230, 1),
-                      child: Row(
+                      color: const Color.fromRGBO(241, 230, 230, 1),
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text('Add Order'),
@@ -277,14 +277,14 @@ class Orders extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 12,
                     ),
                     Container(
                       width: 100,
                       height: 50,
-                      color: Color.fromRGBO(241, 230, 230, 1),
-                      child: Row(
+                      color: const Color.fromRGBO(241, 230, 230, 1),
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text('Export SCV'),
@@ -294,7 +294,7 @@ class Orders extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               OrderTable(),

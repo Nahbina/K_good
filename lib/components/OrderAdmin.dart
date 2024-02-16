@@ -2,11 +2,18 @@ import 'package:flutter/material.dart';
 
 import 'package:k_good/components/Order1.dart';
 
-class Order extends StatelessWidget {
+class Order extends StatefulWidget {
+  const Order({Key? key}) : super(key: key);
+
+  @override
+  State<Order> createState() => _OrderState();
+}
+
+class _OrderState extends State<Order> {
   @override
   Widget build(BuildContext context) {
     List<Widget> rowTitles = [
-      Row(
+      const Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
@@ -32,36 +39,34 @@ class Order extends StatelessWidget {
         Expanded(
           flex: 3,
           child: Container(
-            color: Color.fromRGBO(233, 233, 233, 1.0),
+            color: const Color.fromRGBO(233, 233, 233, 1.0),
             child: Order1(),
           ),
         ),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         Expanded(
           flex: 1,
-          child: Container(
-            child: Center(
-              child: Table(
-                border: TableBorder.all(
-                  color: Color.fromRGBO(238, 222, 222, 1),
-                ),
-                defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-                children: List.generate(rowTitles.length, (index) {
-                  return TableRow(
-                    children: [
-                      TableCell(
-                        child: Container(
-                          height: 70,
-                          color: Color.fromRGBO(233, 233, 233, 1.0),
-                          child: Center(
-                            child: rowTitles[index],
-                          ),
+          child: Center(
+            child: Table(
+              border: TableBorder.all(
+                color: const Color.fromRGBO(238, 222, 222, 1),
+              ),
+              defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+              children: List.generate(rowTitles.length, (index) {
+                return TableRow(
+                  children: [
+                    TableCell(
+                      child: Container(
+                        height: 70,
+                        color: const Color.fromRGBO(233, 233, 233, 1.0),
+                        child: Center(
+                          child: rowTitles[index],
                         ),
                       ),
-                    ],
-                  );
-                }),
-              ),
+                    ),
+                  ],
+                );
+              }),
             ),
           ),
         ),
@@ -80,18 +85,18 @@ class Order extends StatelessWidget {
               child: Container(
                 width: 20,
                 height: 20,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color.fromRGBO(196, 196, 196, 1),
                   shape: BoxShape.rectangle,
                 ),
               ),
             ),
-            SizedBox(width: 8),
+            const SizedBox(width: 8),
             Text(countryName),
           ],
         ),
         Text('$value'),
-        SizedBox(width: 8),
+        const SizedBox(width: 8),
         Icon(iconData),
       ],
     );

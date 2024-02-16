@@ -10,71 +10,69 @@ class FormSetting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Column(
-          children: [
-            for (int i = 0; i < 3; i++)
-              Column(
-                children: [
-                  SizedBox(height: 10),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: TextFormField(
-                          controller: _nameController,
-                          keyboardType: TextInputType.name,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: 'Name',
-                          ),
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Please fill this field';
-                            }
-                            return null;
-                          },
+      body: Column(
+        children: [
+          for (int i = 0; i < 3; i++)
+            Column(
+              children: [
+                const SizedBox(height: 10),
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextFormField(
+                        controller: _nameController,
+                        keyboardType: TextInputType.name,
+                        decoration: const InputDecoration(
+                          border: OutlineInputBorder(),
+                          hintText: 'Name',
                         ),
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please fill this field';
+                          }
+                          return null;
+                        },
                       ),
-                      SizedBox(width: 10),
-                      Expanded(
-                        child: TextFormField(
-                          controller: _emailController,
-                          keyboardType: TextInputType.emailAddress,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: 'Email',
-                          ),
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Please fill this field';
-                            }
-                            return null;
-                          },
+                    ),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: TextFormField(
+                        controller: _emailController,
+                        keyboardType: TextInputType.emailAddress,
+                        decoration: const InputDecoration(
+                          border: OutlineInputBorder(),
+                          hintText: 'Email',
                         ),
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please fill this field';
+                          }
+                          return null;
+                        },
                       ),
-                      SizedBox(width: 10),
-                      Expanded(
-                        child: TextFormField(
-                          controller: _otherController,
-                          keyboardType: TextInputType.text,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: 'Other',
-                          ),
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Please fill this field';
-                            }
-                            return null;
-                          },
+                    ),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: TextFormField(
+                        controller: _otherController,
+                        keyboardType: TextInputType.text,
+                        decoration: const InputDecoration(
+                          border: OutlineInputBorder(),
+                          hintText: 'Other',
                         ),
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please fill this field';
+                          }
+                          return null;
+                        },
                       ),
-                    ],
-                  ),
-                ],
-              ),
-          ],
-        ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+        ],
       ),
       // drawer: MyHomePage(),
     );

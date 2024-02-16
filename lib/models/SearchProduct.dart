@@ -12,15 +12,15 @@ class SearchProduct extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     width: 100.0,
                     height: 60.0,
-                    color: Color.fromRGBO(233, 233, 233, 1.0),
-                    child: Row(
+                    color: const Color.fromRGBO(233, 233, 233, 1.0),
+                    child: const Row(
                       children: [
                         SizedBox(width: 6.0),
                         Text(
@@ -34,22 +34,22 @@ class SearchProduct extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Container(
                     width: 100.0,
                     height: 60.0,
-                    color: Color.fromRGBO(233, 233, 233, 1.0),
+                    color: const Color.fromRGBO(233, 233, 233, 1.0),
                   ),
-                  SizedBox(width: 8),
+                  const SizedBox(width: 8),
                   Container(
                     width: 100.0,
                     height: 60.0,
-                    color: Color.fromRGBO(233, 233, 233, 1.0),
-                    child: Row(
+                    color: const Color.fromRGBO(233, 233, 233, 1.0),
+                    child: const Row(
                       children: [
                         Center(
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: EdgeInsets.all(8.0),
                             child: Text(
                               'My Profile',
                               style: TextStyle(
@@ -64,9 +64,9 @@ class SearchProduct extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 20.0),
-              ProductSearch(),
-              SizedBox(height: 500.0), // Adjust the height as needed
+              const SizedBox(height: 20.0),
+              const ProductSearch(),
+              const SizedBox(height: 500.0),
             ],
           ),
         ),
